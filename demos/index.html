@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/xylit.scss" />
+  <title>Xylit - x-dock</title>
+
+  <style>
+    body { padding: 32px; }
+
+    iframe {
+      border: none;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Xylit.Dev</h1>
+
+  <h2>Layouting</h2>
+
+  <section x-grid="2" style="gap: 23px">
+    <div x-dock class="ar-1x1">
+      <h3 x-dock-top>X-Dock</h3>
+      <iframe class="s-100" src="./layouting/x-dock.html"></iframe>
+    </div>
+
+    <div x-dock class="ar-1x1">
+      <h3 x-dock-top>X-Box - Horizontal</h3>
+      <iframe class="s-100" src="./layouting/x-box-horizontal.html"></iframe>
+    </div>
+
+    <div x-dock class="ar-1x1">
+      <h3 x-dock-top>X-Box - Vertical</h3>
+      <iframe class="s-100" src="./layouting/x-box-vertical.html"></iframe>
+    </div>
+
+    <div x-dock class="ar-1x1">
+      <h3 x-dock-top>X-Grid</h3>
+      <iframe class="s-100" src="./layouting/x-grid.html"></iframe>
+    </div>
+  </section>
+
+  <h2>Wireframes</h2>
+
+  <h3>Landingpage</h3>
+
+  <iframe style="width: 600px; height: 600px;" src="./wireframes/landingpage.html"></iframe>
+</body>
+
+</html>

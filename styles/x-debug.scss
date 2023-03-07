@@ -1,0 +1,8 @@
+[x-debug],
+[x-debug~="child"] > *,
+[x-debug~="descendant"] *,
+[x-debug~="next"] + *,
+[x-debug~="subsequent"] ~ * {
+  outline: 2px solid #ff00ff;
+  outline-offset: -1px;
+}

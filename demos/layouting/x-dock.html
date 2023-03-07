@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../styles/xylit.scss" />
+    <title>Xylit - Layouting: X-Dock</title>
+
+    <style>
+      header,
+      nav,
+      section,
+      footer { padding: 16px;}
+    </style>
+  </head>
+
+  <body x-dock x-debug="child">
+    <header x-dock-top="-xx" >Header</header>
+
+    <nav x-dock-left="xx-" >Left</nav>
+    <nav x-dock-right="-xx">Right</nav>
+
+    <section>Body</section>
+
+    <footer x-dock-bottom="xx-">Footer</footer>
+  </body>
+</html>

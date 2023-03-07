@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../styles/xylit.scss" />
+    <title>Xylit - Layouting: X-Dock</title>
+
+    <style>
+      .hero { background-color: cadetblue; }
+
+      .align-items-center {
+        justify-items: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body x-dock x-debug="descendant">
+    <header class="p-sm" x-dock-top x-hbox="between center">
+      <span>Title</span>
+
+      <nav class="g-md" x-hbox>
+        <a href="#">Product</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <button>Sign Up</button>
+    </header>
+
+    <main x-scroll>
+      <section class="hero">
+        <div class="align-items-center" x-container x-grid="2">
+          <div>
+            <h1>The Title of Your Online Course</h1>
+            <p>Learn how to do things faster and better</p>
+            <p>Create a compeiling summary of your course contend and the key benefits for subscribers</p>
+          </div>
+          
+          <img src="https://via.placeholder.com/150" />
+        </div>
+      </section>
+
+      <section class="py-md" x-container>
+        <small>Enter your Email Address</small>
+        <input placeholder="Email address"/>
+        <button>Start the Coure</button>
+      </section>
+
+      <section x-container>
+        <h2>Course Description</h2>
+
+        <div class="g-md" x-grid="2">
+          <div>
+            <h1>Who is This Course For?</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+
+          <div>
+            <h1>What's in This Course?</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

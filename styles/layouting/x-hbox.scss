@@ -1,0 +1,18 @@
+[x-hbox] {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+[x-hbox^="start"]   { justify-content: flex-start; }
+[x-hbox^="end"]     { justify-content: flex-end; }
+[x-hbox^="center"]  { justify-content: center; }
+[x-hbox^="between"] { justify-content: space-between; }
+[x-hbox^="around"]  { justify-content: space-around; }
+[x-hbox^="evenly"]  { justify-content: space-evenly; }
+
+[x-hbox$="start"]    { align-items: flex-start; }
+[x-hbox$="end"]      { align-items: flex-end; }
+[x-hbox$="center"]   { align-items: center; }
+[x-hbox$="stretch"]  { align-items: stretch; }
+[x-hbox$="baseline"] { align-items: baseline; }

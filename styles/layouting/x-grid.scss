@@ -1,0 +1,31 @@
+// Inspired By: https://github.com/rsms/raster
+
+[x-grid] {
+  --grid-tc: repeat(4, 1fr);
+  --grid-cs: 1; /* column start */
+  --grid-ce: -1; /* column end */
+
+  display: grid;
+  grid-template-columns: var(--grid-tc);
+}
+
+[x-cell] { grid-column-end: span var(--grid-ce) }
+[x-cell="row"] { grid-column: 1 / -1 }
+
+[x-cell*="+"] { grid-column-start: var(--grid-cs) }
+
+[x-cell*="-"],
+[x-cell*=".."] { 
+  grid-column-start: var(--grid-cs);
+  grid-column-end: var(--grid-ce);
+}
+
+@for $i from 1 through 30 {
+  [x-grid="#{$i}"]    { --grid-tc: repeat(#{$i}, 1fr); }
+  [x-cell="#{$i}"]    { --grid-ce: #{$i}; }
+  [x-cell^="#{$i}"]   { --grid-cs: #{$i}; }
+  [x-cell$="+#{$i}"]  { --grid-ce: #{$i}; }
+  [x-cell$="-#{$i}"]  { --grid-ce: #{$i + 1}; }
+}
+
+

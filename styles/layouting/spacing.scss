@@ -1,0 +1,44 @@
+$space: 1rem;
+$spaces: (
+  none: 0,
+  xs: 0.25 * $space,
+  sm: 0.5  * $space,
+  md: $space,
+  lg: 1.5  * $space,
+  xl: 3.0  * $space
+);
+
+@each $size, $value in $spaces {
+  @each $property in (margin, padding) {
+    $abbreviation: str-slice($property, 1, 1);
+
+    .#{$abbreviation}-#{$size} { #{$property}: $value !important; }
+
+    .#{$abbreviation}x-#{$size} {
+      #{$property}-left:  $value !important;
+      #{$property}-right: $value !important;
+    }
+
+    .#{$abbreviation}y-#{$size} {
+      #{$property}-top:     $value !important;
+      #{$property}-bottom:  $value !important;
+    }
+
+    .#{$abbreviation}t-#{$size} { #{$property}-top:     $value !important; }
+    .#{$abbreviation}r-#{$size} { #{$property}-right:   $value !important; }
+    .#{$abbreviation}b-#{$size} { #{$property}-bottom:  $value !important; }
+    .#{$abbreviation}l-#{$size} { #{$property}-left:    $value !important; }
+  }
+
+  .g-#{$size}   { gap: $value; }
+  .gx-#{$size}  { column-gap: $value; }
+  .gy-#{$size}  { row-gap: $value; }
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.ml-auto { margin-left: auto !important; }
+.mr-auto { margin-right: auto !important; }
